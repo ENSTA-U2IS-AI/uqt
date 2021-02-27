@@ -161,6 +161,16 @@ td, th {
     padding: 1%;
 }
 
+.parent2 {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    padding: 1%;
+    left:50%
+}
+
 .child {
     height: 70%;
     width: 70%;
