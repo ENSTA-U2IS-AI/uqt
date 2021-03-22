@@ -183,6 +183,7 @@ table.psets {
   width: 120px;
   border-radius: 120px;
   margin-bottom: 10px;
+
 }
 
 .instructorphotosmall img {
@@ -197,4 +198,15 @@ table.psets {
   text-align: center;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+
+
+.profileDescriptionImg {
+    height: 10em;
+    width: 10em;
+    margin-bottom: 1em;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 50%;
 }
