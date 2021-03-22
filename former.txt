@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CVPR 2021 Tutorial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body>
+<div class="container">
+  <table border="0" align="center">
+    <tbody><tr>
+      <td width="1000" align="center" valign="middle"><h1>Audio-Visual Scene Understanding</h1>
+        <h3>CVPR 2021 Tutorial</h3></td>
+    </tr>
+    <tr>
+      <td colspan="6" align="center"><h4><a href="http://wacv2021.thecvf.com/node/32" target="_blank"> Click here to join our tutorial </a></h4></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center"> <h5>Time: #</h5></td>
+    </tr>
+    <!-- <tr>
+        <td colspan="3" align="center"><h5> Location: #</h5></td>
+    </tr> -->
+    </tbody></table>
+</div>
+
+<br>
+    
+<!-- <div class="container">
+  <div class="imgDiv"><img class="cvprImg" src="https://convaistorageui.blob.core.windows.net/images/cvpr_tutorial/CVPR_image.png" /></div>
+</div> -->
+
+<br>
+
+<div class="container">
+  <h2>Overview</h2>
+    <p>Sight and hearing are two of the most important senses for human perception. From cognitive per- spective, the visual and auditory information is actually slightly discrepant, but the percept is unified with multisensory integration. What’s more, when there are multiple input senses, human reactions usually perform more exactly or efficiently than single sense. Inspired by this, for computational models, our community has begun to explore marrying computer vision with audition, and targets to address some essential problems of audio-visual learning then further develops them into interesting and worthwhile tasks. In recent years, we were delighted to witness many developments in learning from both visual and auditory data.
+    </p>
+    <p>This tutorial aims to cover recent advances in audio-visual learning, from the neuroscience study of humans to the computation models of machine. For each research sub-topic, we will give a concrete introduction of the contained problems/tasks, and the current research progress as well as the open problems. We hope the audience, not only the graduate students but also the researchers new in this area, can benefit from this tutorial and learn the principle problems and cutting-edge approaches of audio-visual learning.
+    </p>
+
+    <p><strong>Neuroscience in audio-visual perception: </strong>On a daily basis, humans are faced with a deluge of auditory and visual information. Yet, perhaps paradoxically, receiving information in two modalities instead of one simplifies the process of parsing a complicated scene. This process is known as audio- visual integration, and it is highly dependent on temporal and spatial properties of incoming stimuli, as well as higher order qualities. This tutorial will discuss several of the most salient perceptual manifestations of audio-visual integration, what we know about the neural structures and connections that underlie them, and the beneficial effects they have on humans’ ability to navigate their sensory worlds.
+    </p>
+
+    <p><strong>Audio scene understanding: </strong>An audio scene often contains multiple sound sources. Signals of these sources may overlap in both time and frequency, and the observed audio signal is the mixture of these source signals. To discover audio scene elements from the audio mixture, various kinds of perceptual cues (e.g., proximity, harmonicity, direction, and timbre) can be utilized to group (cluster) time-frequency (TF) units of the spectrogram. In this tutorial, we will teach some foundations about audio signals, and then cover recent progress in audio scene understanding for inspiring students and researchers in the computer vision community to explore potential research opportunities.
+    </p>
+
+    <p><strong>Audio-visual self-supervised learning: </strong>Self-supervised learning is an emerging research topic within unsupervised learning, which aims to exploit intrinsic labels that come with the data itself for free. Unlike the conventional unimodal case, video is a rich source of audio and visual modalities, where the correlation between modalities can be used as a supervisory signal for self-supervised learning. Recently, audio-visual self-supervised learning has been used to successfully learn effec- tive representations by leveraging the natural <strong>correspondence</strong> and <strong>synchronization</strong> between the audio and visual streams, then the pre-trained model can be served to several unimodal/multimodal downstream tasks and has brought comparable performance to the supervised ones, such as in visual object/action recognition, audio scene/event classification, and visual localization of sound source etc. In this tutorial, we will give a comprehensive introduction about audio-visual self-supervised learning, especially its development roadmap in recent years, as well as providing potential research topics in future.
+    </p>
+
+    <p><strong>Natural interaction with audiovisual messages: </strong>Humans adopt a structured multimodal signal to communicate with each other and convey their intentions. This signal contains modalities of language (in terms of spoken text), visual (in terms of gestures and facial expressions) and acoustic (in terms of changes in tone of speech). Modeling this form of communication, known as multimodal language in NLP, is now a growing research area in machine learning. Since all the modalities involved are sequential, this particular research area requires advanced neural models. In both the computer vision and natural language processing, there has been substantial progress in modeling multimodal language. The recent progress will be a focus of this tutorial.
+    </p>
+
+    <p><strong>Audio-visual cross-modal generation: </strong>Recent works have explored the strong correlation in human perception of auditory and visual stimuli. Remarkable achievements have been made in the Cross- modal audio-visual generation task by the computer vision community. Especially in AR/VR field, the audio-visual generation plays an important and emerging role. For example, speech-driven talking avatar and scene aware audio generation. In this tutorial, we aim to uncover the merits and drawbacks of current audio-drive talking avatar literature and point out promising directions for future work.
+    </p>
+
+    <p><strong>Audio-visual video understanding: </strong>Human perception involves complex analyses of visual, audi- tory, tactile, gustatory, olfactory, and other sensory data. Numerous psychological and brain cognitive studies have shown that combining different sensory data is crucial for human perception. However, the vast majority of work in computational scene understanding for videos, an essential perception task, focuses on visual-only methods ignoring other sensory modalities. They are inherently limited. For example, when the object of interest is outside of the field-of-view, one would rely on audio cues for perception. While there is little data on tactile, gustatory, or olfactory signals, we do have an abundance of multimodal audiovisual data, e.g., YouTube videos. Audio-visual video understanding aims to exploit the both modalities to understand audio and visual scenes inside videos. In this tutorial, we will cover emerging audio-visual video understanding problems including <i>audio-visual event localization and parsing</i>, <i>audio-visual action recognition</i>, and <i>audio-visual video captioning</i>.
+    </p>
+</div>
+
+<br>
+
+<div class="container">
+  <h2>Organizers</h2>
+    <div class="row">
+      <div class="parent col-md-3"> 
+         <a href="https://dtaoo.github.io/" target="_blank">
+         <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/zfBgrjC6/1.jpg"/></div>
+         <div class="nameText"> Di Hu </div></a>
+      </div>
+      
+      <div class="parent col-md-3"> 
+         <a href="http://yapengtian.org/" target="_blank">
+         <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/cJg6fW66/yapeng.jpg"/></div>
+         <div class="nameText"> Yapeng Tian </div></a>
+      </div>
+      
+      <div class="parent col-md-3"> 
+         <a href="https://www.cs.rochester.edu/u/lchen63/" target="_blank">
+         <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/SNMZ125G/Lele.jpg"/></div>
+         <div class="nameText"> Lele Chen </div></a>
+      </div>
+
+      <div class="parent col-md-3"> 
+        <a href="https://www.amir-zadeh.com/" target="_blank">
+        <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/B6Z8Jnwq/Amir.jpg"/></div>
+        <div class="nameText"> Amir Zadeh </div></a>
+     </div>
+
+    </div>
+
+    <div class="row">
+      <div class="parent2 col-md-3"> 
+        <a href="http://www2.ece.rochester.edu/~zduan/" target="_blank">
+        <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/N0c9P462/duan.jpg"/></div>
+        <div class="nameText"> Zhiyao Duan </div></a>
+      </div>
+
+      <div class="parent2 col-md-3">
+         <a href="https://www.urmc.rochester.edu/labs/maddox.aspx" target="_blank">
+         <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/vmtgRVhq/ross.jpg"/></div>
+         <div class="nameText"> Ross K. Maddox</div></a>
+      </div>
+
+      <div class="parent2 col-md-3">
+        <a href="https://www.cs.rochester.edu/~cxu22/" target="_blank">
+        <div class="imgDiv"><img class="profileDescriptionImg" src="https://i.postimg.cc/T3dXfrZT/Xnip2020-11-04-11-49-52.jpg"/></div>
+        <div class="nameText"> Chenliang Xu</div></a>
+     </div>
+      
+    </div>
+      
+  
+</div>
+
+    
+
+<br>
+
+
+
+<!--<p align="center" class="acknowledgement">Last updated: 30 July 2012</p>-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+//openCity(event, 'PST');
+document.getElementById("default_button").click(); // Click on the checkbox
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
+
+</body></html>
