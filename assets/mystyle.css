@@ -215,10 +215,12 @@ table.psets {
 
 .tab {
     overflow: hidden;
-    /*border: 1px solid #ccc;*/
+    border-bottom-style:dotted;
+	border-color:#4d4b59;
     background-color: #ffffff;
     color: #4d4b59;
 	background: #ffffff;
+
   }
 
 .tablinks {
