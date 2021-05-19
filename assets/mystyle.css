@@ -149,14 +149,6 @@ table.notes {
 	border-collapse: collapse;
 }
 
-.alt td {
-	padding: 0em;
-}
-
-.alt tr {
-	padding: 0em;
-}
-
 .notes td {
 	border-bottom: 1px solid;
 	padding-bottom: 5px;
@@ -223,7 +215,7 @@ table.psets {
 
 .tab {
     overflow: hidden;
-    border-bottom-style:dashed;
+    
 	border-color:#606c71;
     background-color: #ffffff;
     color: #606c71;
