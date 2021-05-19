@@ -149,7 +149,11 @@ table.notes {
 	border-collapse: collapse;
 }
 
-table td {
+.alt td {
+	padding: 0em;
+}
+
+.alt tr {
 	padding: 0em;
 }
 
