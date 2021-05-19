@@ -149,6 +149,10 @@ table.notes {
 	border-collapse: collapse;
 }
 
+table td {
+	padding: 0em;
+}
+
 .notes td {
 	border-bottom: 1px solid;
 	padding-bottom: 5px;
