@@ -7,13 +7,13 @@
 <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>The nuts and bolts of Uncertainty Quantification</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Organizers" />
+<meta property="og:title" content="Uncertainty Quantification Tutorial" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="CVPR 2021 Tutorial" />
-<meta property="og:description" content="CVPR 2021 Tutorial" />
-<link rel="canonical" href="https://audio-visual-scene-understanding.github.io/" />
-<meta property="og:url" content="https://audio-visual-scene-understanding.github.io/" />
-<meta property="og:site_name" content="Audio-Visual Scene Understanding" />
+<meta name="description" content="WACV 2024 Tutorial" />
+<meta property="og:description" content="WACV 2024 Tutorial" />
+<link rel="canonical" href="https://uqtutorial.github.io/" />
+<meta property="og:url" content="https://uqtutorial.github.io/" />
+<meta property="og:site_name" content="Uncertainty Quantification Tutorial" />
 <script type="application/ld+json">
 {"description":"WACV 2024 Tutorial","@type":"WebSite","url":"https://uqtutorial.github.io/","name":"Uncertainty Quantification Tutorial","headline":"The nuts and bolts of Uncertainty Quantification"}</script>
 <!-- End Jekyll SEO tag -->
@@ -28,16 +28,141 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">The nuts and bolts of Uncertainty Quantification</h1>
-      <h2 class="project-tagline">WACV 2024<br>Time: January XX </h2>
+      <h2 class="project-tagline">WACV 2024<br>Half-day event </h2>
       
       
       
     </section>
 
-<!--    <section class="main-content">
-       <h2 id="organizers">Organizers</h2>
- -->
+   <section class="main-content">
+    <div class="container">
+      <h2>Organizers</h2>
+        <div>
+    
+          <div class="instructor">
+          <a href="http://u2is.ensta-paris.fr/members/franchi/index.php?lang=fr"  target="_blank">
+          <div class="instructorphoto"><img src="http://u2is.ensta-paris.fr/members/pics/franchi.jpg" width="20%" hspace="2%">   </div>  
+          <div>Gianni Franchi<br><small>ENSTA Paris</small></div></a>
+    
+          </div>
+      
+          <div class="instructor">
+                  <a href="https://github.com/o-laurent"  target="_blank">
+    
+          <div class="instructorphoto"><img src="https://avatars.githubusercontent.com/u/62881275?v=4" width="20%" hspace="2%">  </div> 
+          <div>Olivier Laurent<br><small>ENSTA Paris / Paris Saclay University</small></div></a>
+    
+          </div>
+    
+          <div class="instructor">
+                  <a href="https://qbouniot.github.io/"  target="_blank">
+    
+          <div class="instructorphoto"><img src="https://qbouniot.github.io/images/profil2.jpg" width="5%" hspace="2%"> </div>
+          <div>Quentin Bouniot<br><small>Télécom Paris</small></div></a>
+    
+          </div>
+    
+          <div class="instructor">
+                  <a href="https://abursuc.github.io/"  target="_blank">
+    
+          <div class="instructorphoto"><img src="https://abursuc.github.io/img/abursuc.jpg" width="20%" hspace="2%"></div>
+          <div>Andrei Bursuc<br><small>Valeo.ai</small></div></a>
+          </div>
 
+          <div class="containertext">
+            <h2 style="text-align: center">Overview</h2>
+              <p> Deep Learning (DL) technique are more and more used due to their exceptional performance across various domains such as image classification, natural language processing, and autonomous driving. However, DL models often exhibit overconfidence and vulnerability to unreliable predictions, which can have critical consequences, especially in safety-critical systems. To address this issue and enhance the trustworthiness of DL models, quantifying their uncertainty is imperative.</p>
+              <p>In this tutorial, we delve into the theory of uncertainty quantification for Deep Neural Networks (DNNs). We explore methods and techniques to effectively measure and interpret uncertainty, equipping practitioners with the tools to foster more reliable and robust DL solutions.
+              </p>
+          </div> 
+          
+          <br>
+
+          <div class="containertext">
+            <h2 style="text-align: center">Outline</h2>
+            <h3 style="text-align: left">Why Uncertainty Quantification ?</h3>
+              <p> To start, we will delineate the various forms of uncertainty that exist within DNNs. This will provide an opportunity to elucidate the primary facets of reliability and shed light on the specific issues that different approaches aim to address. We will also introduce various real-world applications where the study of uncertainty plays a pivotal role.</p>
+
+              <h3 style="text-align: left">Introduction to probabilistic deep models</h3>
+              <p> In this part, our focus will shift towards the transformation of conventional DNNs into probabilistic models. We will expound upon the connection between cross entropy and maximum likelihood and delve into the classical Bayesian framework and the maximum a posteriori approach. Furthermore, we will explore the correlation with
+                regression tasks.</p>
+
+              <h3 style="text-align: left">Bayesian Neural Networks</h3>
+              <p> This part will center on the principles of Bayesian Neural Networks (BNNs), detailing how they are constructed,
+                  trained, and how the posterior distribution of these BNNs
+                  is estimated. We will take a gradual approach to elucidate
+                  the key concepts of BNNs while also highlighting the inherent limitations of these techniques.</p>
+
+              <h3 style="text-align: left">Uncertainty from Deep Ensembles</h3>
+              <p> Here, we will shift our attention to ensemble strategies,
+                which frequently yield superior performances. We will
+                delve into the workings of these ensemble techniques, the
+                reasons behind their effectiveness, and methods for optimizing their efficiency and computational resources for computer vision applications.</p>
+
+              <h3 style="text-align: left">Deterministic Uncertainty Methods</h3>
+              <p> In this section, we will present specific solutions that
+                have been explored in the context of regression tasks and
+                semantic segmentation. The objective of this part is to provide concrete examples of techniques that illustrate how
+                uncertainty can be quantified in the realm of computer vision tasks, aiding the audience in understanding these approaches more comprehensively.</p>
+
+              <h3 style="text-align: left">Uncertainty quantification: Do It Yourself</h3>
+              <p> In this section, we will introduce the <a href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch Uncertainty
+                library</a> and provide guidance on how to utilize it effectively. We will demonstrate how to measure uncertainty in the context of image classification. Using a Google Colab notebook, we will enable attendees to actively engage
+                and understand the importance of uncertainty quantification, along with practical insights on how to perform it.</p>
+          </div>
+
+          <br>
+
+          <!-- <div class="containertext">
+            <h2 style="text-align: center">Target Audience</h2>
+              <p> The tutorial targets both academic
+                and industrial researchers on all levels.</p>
+          </div>  -->
+
+          <div class="containertext">
+            <h2 style="text-align: center">Relation to prior tutorials and short courses</h2>
+              <p> This tutorial is affiliated with the <a href="https://uncv2023.github.io/">UNCV workshop</a>,
+                which had its inaugural edition at ECCV and the subsequent one at ICCV, although our primary
+                emphasis in this tutorial will be on the theoretical facets. </p>
+              <p> Uncertainty Quantification has received some attention
+                in recent times, as evidenced by its inclusion as sections in
+                the tutorial <a href="https://abursuc.github.io/many-faces-reliability/">'Many Faces of Reliability of Deep Learning for Real-World Deployment'</a>. While this excellent
+                tutorial explored various applications associated with uncertainty, it did not place a specific emphasis on probabilistic
+                models and Bayesian Neural Networks. Our tutorial aims
+                to provide a more in-depth exploration of uncertainty theory, accompanied by the introduction of practical applications, including the presentation of our library, <a href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch Uncertainty</a>.</p>
+          </div> 
+
+          <div class="containertext">
+            <h2 style="text-align: center">Selected References</h2>
+            <ol>
+              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S.,
+                & Bloch, I. (2020). Encoding the latent posterior of
+                Bayesian Neural Networks for uncertainty quantifica-
+                tion. arXiv preprint arXiv:2012.02818.</li>
+              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
+                Bloch, I. (2020). One versus all for deep neural network
+                incertitude (OVNNI) quantification. IEEE Access</li>
+              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
+                Bloch, I. (2020, August). TRADI: Tracking deep neural
+                network weight distributions. ECCV 2020</li>
+              <li><b>Franchi, G.</b>, Yu, X., Bursuc, A., Aldea, E., Dubuisson,
+                S., & Filliat, D. (2022, October). Latent Discriminant
+                deterministic Uncertainty. ECCV 2022</li>
+              <li><b>Laurent, O.</b>, Lafage, A., Tartaglione, E., Daniel, G.,
+                Martinez, J. M., Bursuc, A., & <b>Franchi, G.</b> (2022).
+                Packed-Ensembles for Efficient Uncertainty Estima-
+                tion. ICLR 2023</li>
+              <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2022, October). On
+                Monocular Depth Estimation and Uncertainty Quantifi-
+                cation using Classification Approaches for Regression.
+                In 2022 IEEE International Conference on Image Pro-
+                cessing (ICIP) (pp. 1481-1485). IEEE.</li>
+              <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2021, Novem-
+                ber). SLURP: Side Learning Uncertainty for Regres-
+                sion Problems. In Proceedings of the British Machine
+                Vision Conference.</li>
+            </ol> 
+          </div> 
 
 <!--
  <div class="containertext">
@@ -47,18 +172,6 @@
      <a href="https://arxiv.org/abs/2208.09579"  target="_blank">[arXiv]</a>
     </p>
 </div> 
-
-
-<div class="containertext">
-  <h2 style="text-align: center">Overview</h2>
-    <p>Sight and hearing are two of the most important senses for human perception. From cognitive perspective, the visual and auditory information is actually slightly discrepant, but the percept is unified with multisensory integration. What’s more, when there are multiple input senses, human reactions usually perform more exactly or efficiently than single sense. Inspired by this, for computational models, our community has begun to explore marrying computer vision with audition, and targets to address some essential problems of audio-visual learning then further develops them into interesting and worthwhile tasks. In recent years, we were delighted to witness many developments in learning from both visual and auditory data.
-    </p>
-    <p>This tutorial aims to cover recent advances in audio-visual learning, from the neuroscience study of humans to the computation models of machine. For each research sub-topic, we will give a concrete introduction of the contained problems/tasks, and the current research progress as well as the open problems. We hope the audience, not only the graduate students but also the researchers new in this area, can benefit from this tutorial and learn the principle problems and cutting-edge approaches of audio-visual learning.
-    </p>
-    </p>
-</div> 
-
-<br>
 
 
 
@@ -343,63 +456,7 @@
 
   
 
-  <div class="container">
-    <h2>Organizers</h2>
-      <div>
-  
-        <div class="instructor">
-        <a href="https://dtaoo.github.io/"  target="_blank">
-        <div class="instructorphoto"><img src="https://i.postimg.cc/ncrfsmC7/dihu.jpg" width="20%" hspace="2%">   </div>  
-        <div>Di Hu<br><small>Renmin University of China</small></div></a>
-  
-        </div>
     
-        <div class="instructor">
-                <a href="http://yapengtian.org/"  target="_blank">
-  
-        <div class="instructorphoto"><img src="https://i.postimg.cc/NFfqk9D3/yapeng.jpg" width="20%" hspace="2%">  </div> 
-        <div>Yapeng Tian<br><small>University of Rochester</small></div></a>
-  
-        </div>
-  
-        <div class="instructor">
-                <a href="https://www.cs.rochester.edu/u/lchen63/"  target="_blank">
-  
-        <div class="instructorphoto"><img src="https://i.postimg.cc/L5CdC90n/Lele.jpg" width="20%" hspace="2%"> </div>
-        <div>Lele Chen<br><small>University of Rochester</small></div></a>
-  
-        </div>
-  
-        <div class="instructor">
-                <a href="https://www.amir-zadeh.com/"  target="_blank">
-  
-        <div class="instructorphoto"><img src="https://i.postimg.cc/85bgvBRd/Amir.jpg" width="20%" hspace="2%"></div>
-        <div>Amir Zadeh<br><small>Carnegie Mellon University</small></div></a>
-        </div>
-  
-        <div class="instructor">
-                <a href="http://www2.ece.rochester.edu/~zduan/"  target="_blank">
-  
-        <div class="instructorphoto"><img src="https://i.postimg.cc/764ybQ2Y/duan.jpg" width="20%" hspace="2%">     </div>
-        <div>Zhiyao Duan<br><small>University of Rochester</small></div></a>
-        </div>
-    
-        <div class="instructor">
-                <a href="https://www.urmc.rochester.edu/labs/maddox.aspx"  target="_blank">
-  
-        <div class="instructorphoto"><img src="https://i.postimg.cc/HLXgYCjh/ross.jpg" width="20%" hspace="2%"></div>   
-        <div>Ross K. Maddox<br><small>University of Rochester</small></div></a>
-  
-      </div>
-  
-      <div class="instructor">
-        <a href="https://www.cs.rochester.edu/~cxu22/"  target="_blank">
-  
-      <div class="instructorphoto"><img src="https://i.postimg.cc/1RJZ5B5s/xu.jpg" width="20%" hspace="2%"></div>   
-    <div>Chenliang Xu<br><small>University of Rochester</small></div></a>
-      </div>
-  
-  
   
   
   
