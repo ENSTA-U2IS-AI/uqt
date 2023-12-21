@@ -1,170 +1,206 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>The nuts and bolts of Uncertainty Quantification</title>
-<meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Uncertainty Quantification Tutorial" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="WACV 2024 Tutorial" />
-<meta property="og:description" content="WACV 2024 Tutorial" />
-<link rel="canonical" href="https://ensta-u2is.github.io/uqt/" />
-<meta property="og:url" content="https://ensta-u2is.github.io/uqt/" />
-<meta property="og:site_name" content="Uncertainty Quantification Tutorial" />
-<script type="application/ld+json">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>The nuts and bolts of Uncertainty Quantification</title>
+  <meta name="generator" content="Jekyll v3.8.5" />
+  <meta property="og:title" content="Uncertainty Quantification Tutorial" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="WACV 2024 Tutorial" />
+  <meta property="og:description" content="WACV 2024 Tutorial" />
+  <link rel="canonical" href="https://ensta-u2is.github.io/uqt/" />
+  <meta property="og:url" content="https://ensta-u2is.github.io/uqt/" />
+  <meta property="og:site_name" content="Uncertainty Quantification Tutorial" />
+  <script type="application/ld+json">
 {"description":"WACV 2024 Tutorial","@type":"WebSite","url":"https://ensta-u2is.github.io/uqt/","name":"Uncertainty Quantification Tutorial","headline":"The nuts and bolts of Uncertainty Quantification"}</script>
-<!-- End Jekyll SEO tag -->
+  <!-- End Jekyll SEO tag -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="/assets/css/style.css?v=6630701df1d052c81ea810d987f1f29fdd76c5ad">
-    <link rel="stylesheet" href="/assets/mystyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/assets/css/style.css?v=6630701df1d052c81ea810d987f1f29fdd76c5ad">
+  <link rel="stylesheet" href="/assets/mystyle.css">
 
 
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">The nuts and bolts of Uncertainty Quantification</h1>
-      <h2 class="project-tagline">WACV 2024<br>Half-day event </h2>
-      
-      
-      
-    </section>
+</head>
 
-   <section class="main-content">
+<body>
+  <section class="page-header">
+    <h1 class="project-name">The nuts and bolts of Uncertainty Quantification</h1>
+    <h2 class="project-tagline">WACV 2024<br>Half-day event </h2>
+
+
+
+  </section>
+
+  <section class="main-content">
     <div class="container">
       <h2>Organizers</h2>
-        <div>
-    
-          <div class="instructor">
-          <a href="http://u2is.ensta-paris.fr/members/franchi/index.php?lang=fr"  target="_blank">
-          <div class="instructorphoto"><img src="http://u2is.ensta-paris.fr/members/pics/franchi.jpg" width="20%" hspace="2%">   </div>  
-          <div>Gianni Franchi<br><small>ENSTA Paris</small></div></a>
-    
-          </div>
-      
-          <div class="instructor">
-                  <a href="https://github.com/o-laurent"  target="_blank">
-    
-          <div class="instructorphoto"><img src="https://avatars.githubusercontent.com/u/62881275?v=4" width="20%" hspace="2%">  </div> 
-          <div>Olivier Laurent<br><small>ENSTA Paris / Paris Saclay University</small></div></a>
-    
-          </div>
-    
-          <div class="instructor">
-                  <a href="https://qbouniot.github.io/"  target="_blank">
-    
-          <div class="instructorphoto"><img src="https://qbouniot.github.io/images/profil2.jpg" width="5%" hspace="2%"> </div>
-          <div>Quentin Bouniot<br><small>Télécom Paris</small></div></a>
-    
-          </div>
-    
-          <div class="instructor">
-                  <a href="https://abursuc.github.io/"  target="_blank">
-    
-          <div class="instructorphoto"><img src="https://abursuc.github.io/img/abursuc.jpg" width="20%" hspace="2%"></div>
-          <div>Andrei Bursuc<br><small>Valeo.ai</small></div></a>
-          </div>
+      <div>
 
-          <div class="containertext">
-            <h2 style="text-align: center">Overview</h2>
-              <p> Deep Learning (DL) technique are more and more used due to their exceptional performance across various domains such as image classification, natural language processing, and autonomous driving. However, DL models often exhibit overconfidence and vulnerability to unreliable predictions, which can have critical consequences, especially in safety-critical systems. To address this issue and enhance the trustworthiness of DL models, quantifying their uncertainty is imperative.</p>
-              <p>In this tutorial, we delve into the theory of uncertainty quantification for Deep Neural Networks (DNNs). We explore methods and techniques to effectively measure and interpret uncertainty, equipping practitioners with the tools to foster more reliable and robust DL solutions.
-              </p>
-          </div> 
-          
-          <br>
+        <div class="instructor">
+          <a href="http://u2is.ensta-paris.fr/members/franchi/index.php?lang=fr" target="_blank">
+            <div class="instructorphoto"><img src="http://u2is.ensta-paris.fr/members/pics/franchi.jpg" width="20%"
+                hspace="2%"> </div>
+            <div>Gianni Franchi<br><small>ENSTA Paris</small></div>
+          </a>
 
-          <div class="containertext">
-            <h2 style="text-align: center">Outline</h2>
-            <h3 style="text-align: left">Why Uncertainty Quantification ?</h3>
-              <p> To start, we will delineate the various forms of uncertainty that exist within DNNs. This will provide an opportunity to elucidate the primary facets of reliability and shed light on the specific issues that different approaches aim to address. We will also introduce various real-world applications where the study of uncertainty plays a pivotal role.</p>
+        </div>
 
-              <h3 style="text-align: left">Introduction to probabilistic deep models</h3>
-              <p> In this part, our focus will shift towards the transformation of conventional DNNs into probabilistic models. We will expound upon the connection between cross entropy and maximum likelihood and delve into the classical Bayesian framework and the maximum a posteriori approach. Furthermore, we will explore the correlation with
-                regression tasks.</p>
+        <div class="instructor">
+          <a href="https://github.com/o-laurent" target="_blank">
 
-              <h3 style="text-align: left">Bayesian Neural Networks</h3>
-              <p> This part will center on the principles of Bayesian Neural Networks (BNNs), detailing how they are constructed,
-                  trained, and how the posterior distribution of these BNNs
-                  is estimated. We will take a gradual approach to elucidate
-                  the key concepts of BNNs while also highlighting the inherent limitations of these techniques.</p>
+            <div class="instructorphoto"><img src="https://avatars.githubusercontent.com/u/62881275?v=4" width="20%"
+                hspace="2%"> </div>
+            <div>Olivier Laurent<br><small>ENSTA Paris / Paris Saclay University</small></div>
+          </a>
 
-              <h3 style="text-align: left">Uncertainty from Deep Ensembles</h3>
-              <p> Here, we will shift our attention to ensemble strategies,
-                which frequently yield superior performances. We will
-                delve into the workings of these ensemble techniques, the
-                reasons behind their effectiveness, and methods for optimizing their efficiency and computational resources for computer vision applications.</p>
+        </div>
 
-              <h3 style="text-align: left">Deterministic Uncertainty Methods</h3>
-              <p> In this section, we will present specific solutions that
-                have been explored in the context of regression tasks and
-                semantic segmentation. The objective of this part is to provide concrete examples of techniques that illustrate how
-                uncertainty can be quantified in the realm of computer vision tasks, aiding the audience in understanding these approaches more comprehensively.</p>
+        <div class="instructor">
+          <a href="https://qbouniot.github.io/" target="_blank">
 
-              <h3 style="text-align: left">Uncertainty quantification: Do It Yourself</h3>
-              <p> In this section, we will introduce the <a href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch Uncertainty
-                library</a> and provide guidance on how to utilize it effectively. We will demonstrate how to measure uncertainty in the context of image classification. Using a Google Colab notebook, we will enable attendees to actively engage
-                and understand the importance of uncertainty quantification, along with practical insights on how to perform it.</p>
-          </div>
+            <div class="instructorphoto"><img src="https://qbouniot.github.io/images/profil2.jpg" width="5%"
+                hspace="2%"> </div>
+            <div>Quentin Bouniot<br><small>Télécom Paris</small></div>
+          </a>
 
-          <br>
+        </div>
 
-          <!-- <div class="containertext">
+        <div class="instructor">
+          <a href="https://abursuc.github.io/" target="_blank">
+
+            <div class="instructorphoto"><img src="https://abursuc.github.io/img/abursuc.jpg" width="20%" hspace="2%">
+            </div>
+            <div>Andrei Bursuc<br><small>Valeo.ai</small></div>
+          </a>
+        </div>
+
+        <div class="containertext">
+          <h2 style="text-align: center">Overview</h2>
+          <p> Deep Learning (DL) technique are more and more used due to their exceptional performance across various
+            domains such as image classification, natural language processing, and autonomous driving. However, DL
+            models often exhibit overconfidence and vulnerability to unreliable predictions, which can have critical
+            consequences, especially in safety-critical systems. To address this issue and enhance the trustworthiness
+            of DL models, quantifying their uncertainty is imperative.</p>
+          <p>In this tutorial, we delve into the theory of uncertainty quantification for Deep Neural Networks (DNNs).
+            We explore methods and techniques to effectively measure and interpret uncertainty, equipping practitioners
+            with the tools to foster more reliable and robust DL solutions.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="containertext">
+          <h2 style="text-align: center">Outline</h2>
+          <h3 style="text-align: left">Why Uncertainty Quantification ?</h3>
+          <p> To start, we will delineate the various forms of uncertainty that exist within DNNs. This will provide an
+            opportunity to elucidate the primary facets of reliability and shed light on the specific issues that
+            different approaches aim to address. We will also introduce various real-world applications where the study
+            of uncertainty plays a pivotal role.</p>
+
+          <h3 style="text-align: left">Introduction to probabilistic deep models</h3>
+          <p> In this part, our focus will shift towards the transformation of conventional DNNs into probabilistic
+            models. We will expound upon the connection between cross entropy and maximum likelihood and delve into the
+            classical Bayesian framework and the maximum a posteriori approach. Furthermore, we will explore the
+            correlation with
+            regression tasks.</p>
+
+          <h3 style="text-align: left">Bayesian Neural Networks</h3>
+          <p> This part will center on the principles of Bayesian Neural Networks (BNNs), detailing how they are
+            constructed,
+            trained, and how the posterior distribution of these BNNs
+            is estimated. We will take a gradual approach to elucidate
+            the key concepts of BNNs while also highlighting the inherent limitations of these techniques.</p>
+
+          <h3 style="text-align: left">Uncertainty from Deep Ensembles</h3>
+          <p> Here, we will shift our attention to ensemble strategies,
+            which frequently yield superior performances. We will
+            delve into the workings of these ensemble techniques, the
+            reasons behind their effectiveness, and methods for optimizing their efficiency and computational resources
+            for computer vision applications.</p>
+
+          <h3 style="text-align: left">Deterministic Uncertainty Methods</h3>
+          <p> In this section, we will present specific solutions that
+            have been explored in the context of regression tasks and
+            semantic segmentation. The objective of this part is to provide concrete examples of techniques that
+            illustrate how
+            uncertainty can be quantified in the realm of computer vision tasks, aiding the audience in understanding
+            these approaches more comprehensively.</p>
+
+          <h3 style="text-align: left">Uncertainty quantification: Do It Yourself</h3>
+          <p> In this section, we will introduce the <a href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch
+              Uncertainty
+              library</a> and provide guidance on how to utilize it effectively. We will demonstrate how to measure
+            uncertainty in the context of image classification. Using a Google Colab notebook, we will enable attendees
+            to actively engage
+            and understand the importance of uncertainty quantification, along with practical insights on how to perform
+            it.</p>
+        </div>
+
+        <br>
+
+        <!-- <div class="containertext">
             <h2 style="text-align: center">Target Audience</h2>
               <p> The tutorial targets both academic
                 and industrial researchers on all levels.</p>
           </div>  -->
 
-          <div class="containertext">
-            <h2 style="text-align: center">Relation to prior tutorials and short courses</h2>
-              <p> This tutorial is affiliated with the <a href="https://uncv2023.github.io/">UNCV workshop</a>,
-                which had its inaugural edition at ECCV and the subsequent one at ICCV, although our primary
-                emphasis in this tutorial will be on the theoretical facets. </p>
-              <p> Uncertainty Quantification has received some attention
-                in recent times, as evidenced by its inclusion as sections in
-                the tutorial <a href="https://abursuc.github.io/many-faces-reliability/">'Many Faces of Reliability of Deep Learning for Real-World Deployment'</a>. While this excellent
-                tutorial explored various applications associated with uncertainty, it did not place a specific emphasis on probabilistic
-                models and Bayesian Neural Networks. Our tutorial aims
-                to provide a more in-depth exploration of uncertainty theory, accompanied by the introduction of practical applications, including the presentation of our library, <a href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch Uncertainty</a>.</p>
-          </div> 
+        <div class="containertext">
+          <h2 style="text-align: center">Relation to prior tutorials and short courses</h2>
+          <p> This tutorial is affiliated with the <a href="https://uncv2023.github.io/">UNCV workshop</a>,
+            which had its inaugural edition at ECCV and the subsequent one at ICCV, although our primary
+            emphasis in this tutorial will be on the theoretical facets. </p>
+          <p> Uncertainty Quantification has received some attention
+            in recent times, as evidenced by its inclusion as sections in
+            the tutorial <a href="https://abursuc.github.io/many-faces-reliability/">'Many Faces of Reliability of Deep
+              Learning for Real-World Deployment'</a>. While this excellent
+            tutorial explored various applications associated with uncertainty, it did not place a specific emphasis on
+            probabilistic
+            models and Bayesian Neural Networks. Our tutorial aims
+            to provide a more in-depth exploration of uncertainty theory, accompanied by the introduction of practical
+            applications, including the presentation of our library, <a
+              href="https://github.com/ENSTA-U2IS/torch-uncertainty">Torch Uncertainty</a>.</p>
+        </div>
 
-          <div class="containertext">
-            <h2 style="text-align: center">Selected References</h2>
-            <ol>
-              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S.,
-                & Bloch, I. (2020). Encoding the latent posterior of
-                Bayesian Neural Networks for uncertainty quantifica-
-                tion. arXiv preprint arXiv:2012.02818.</li>
-              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
-                Bloch, I. (2020). One versus all for deep neural network
-                incertitude (OVNNI) quantification. IEEE Access</li>
-              <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
-                Bloch, I. (2020, August). TRADI: Tracking deep neural
-                network weight distributions. ECCV 2020</li>
-              <li><b>Franchi, G.</b>, Yu, X., Bursuc, A., Aldea, E., Dubuisson,
-                S., & Filliat, D. (2022, October). Latent Discriminant
-                deterministic Uncertainty. ECCV 2022</li>
-              <li><b>Laurent, O.</b>, Lafage, A., Tartaglione, E., Daniel, G.,
-                Martinez, J. M., Bursuc, A., & <b>Franchi, G.</b> (2022).
-                Packed-Ensembles for Efficient Uncertainty Estima-
-                tion. ICLR 2023</li>
-              <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2022, October). On
-                Monocular Depth Estimation and Uncertainty Quantifi-
-                cation using Classification Approaches for Regression.
-                In 2022 IEEE International Conference on Image Pro-
-                cessing (ICIP) (pp. 1481-1485). IEEE.</li>
-              <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2021, Novem-
-                ber). SLURP: Side Learning Uncertainty for Regres-
-                sion Problems. In Proceedings of the British Machine
-                Vision Conference.</li>
-            </ol> 
-          </div> 
+        <div class="containertext">
+          <h2 style="text-align: center">Selected References</h2>
+          <ol>
+            <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S.,
+              & Bloch, I. (2020). Encoding the latent posterior of
+              Bayesian Neural Networks for uncertainty quantifica-
+              tion. arXiv preprint arXiv:2012.02818.</li>
+            <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
+              Bloch, I. (2020). One versus all for deep neural network
+              incertitude (OVNNI) quantification. IEEE Access</li>
+            <li><b>Franchi, G.</b>, Bursuc, A., Aldea, E., Dubuisson, S., &
+              Bloch, I. (2020, August). TRADI: Tracking deep neural
+              network weight distributions. ECCV 2020</li>
+            <li><b>Franchi, G.</b>, Yu, X., Bursuc, A., Aldea, E., Dubuisson,
+              S., & Filliat, D. (2022, October). Latent Discriminant
+              deterministic Uncertainty. ECCV 2022</li>
+            <li><b>Laurent, O.</b>, Lafage, A., Tartaglione, E., Daniel, G.,
+              Martinez, J. M., Bursuc, A., & <b>Franchi, G.</b> (2022).
+              Packed-Ensembles for Efficient Uncertainty Estima-
+              tion. ICLR 2023</li>
+            <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2022, October). On
+              Monocular Depth Estimation and Uncertainty Quantifi-
+              cation using Classification Approaches for Regression.
+              In 2022 IEEE International Conference on Image Pro-
+              cessing (ICIP) (pp. 1481-1485). IEEE.</li>
+            <li>Yu, X., <b>Franchi, G.</b>, & Aldea, E. (2021, Novem-
+              ber). SLURP: Side Learning Uncertainty for Regres-
+              sion Problems. In Proceedings of the British Machine
+              Vision Conference.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--
+  <!--
  <div class="containertext">
   <h2 style="text-align: center">News</h2>
     <p>A survey on the audio-visual learning is released based on this tutorial.
@@ -462,35 +498,17 @@
   
   </div>
 -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 
-  <script>
-    //openCity(event, 'PST');
-    document.getElementById("default_button").click(); // Click on the checkbox
-    function openCity(evt, cityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-    
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-    
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-    
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    
-    </script>
-  </body>
+</body>
+
 </html>
