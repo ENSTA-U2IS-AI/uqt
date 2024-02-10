@@ -1,1 +1,1 @@
-https://ensta-u2is.github.io/uqt/
+https://ensta-u2is-ai.github.io/uqt/
