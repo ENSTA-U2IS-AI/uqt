@@ -31,7 +31,7 @@ Foundations to Real-World Applications"}</script>
   <section class="page-header">
     <h1 class="project-name">A Bayesian Odyssey in Uncertainty: from Theoretical
       Foundations to Real-World Applications</h1>
-    <h2 class="project-tagline">ECCV 2024<br>TBA</h2>
+    <h2 class="project-tagline">ECCV 2024<br>To Be Announced</h2>
   </section>
 
   <section class="main-content" style="max-width:100%">
@@ -73,26 +73,79 @@ Foundations to Real-World Applications"}</script>
           <a href="https://abursuc.github.io/" target="_blank">
             <div class="instructorphoto"><img src="https://abursuc.github.io/img/abursuc.jpg">
             </div>
-            <div>Andrei Bursuc<br><small>Valeo.ai</small></div>
+            <div>Andrei Bursuc<br><small>valeo.ai</small></div>
           </a>
         </div>
 
         <br>
         <div class="containertext" style="max-width:50rem">
           <h2 style="text-align: center">Overview</h2>
-          <div style="text-align: center">TBA</div>
+          <div style="text-align: center">
+            This tutorial is here to help researchers understand and handle uncertainty in their models,
+            making them more reliable using Bayesian methods. We'll start by discussing different Bayesian
+            approaches and then focus on Bayesian Neural Networks and how to approximate them efficiently for
+            computer vision tasks. We will also use real-world examples and practical methods to show how to
+            put these ideas into practice.
+          </div>
         </div>
 
         <br>
 
         <div class="containertext" style="max-width:50rem">
           <h2 style="text-align: center">Outline</h2>
-          <div style="text-align: center">TBA</div>
 
-          <h3 style="text-align: left">Uncertainty quantification framework</h3>
-          <p> In this section, we will quickly introduce the <a
-              href="https://github.com/ensta-u2is-ai/torch-uncertainty">TorchUncertainty
-              library</a>, an uncertainty-aware open-source framework for training models in PyTorch.</p>
+          <h3 style="text-align: left">Introduction: Why & where is UQ helpful?</h3>
+          <p>
+            Initial exploration into the critical role of uncertainty quantification (UQ) within the realm
+            of computer vision (CV): participants will gain an understanding of why it’s essential to consider uncertainty in CV, especially concerning decision-making in complex
+            environments. We will introduce real-world scenarios where uncertainty can profoundly
+            impact model performance and safety, setting the stage for deeper exploration through out the tutorial.
+          </p>
+          <h3 style="text-align: left">From maximum a posteriori to BNNs.</h3>
+          <p>
+            In this part, we will journey through the evolution of UQ techniques, starting
+            from classic approaches such as maximum a posteriori estimation to the more ellaborate Bayesian Neural Networks. The participants will grasp the conceptual foundations
+            of UQ, laying the groundwork for the subsequent discussions of Bayesian methods.
+          </p>
+          <h3 style="text-align: left">Strategies for BNN posterior inference.</h3>
+          <p>
+            This is the core part, which will dive into the process of estimating the posterior distribution of BNNs. The participants
+            will gain insights into the computational complexities involved in modeling uncertainty
+            through a comprehensive overview of techniques such as Variational Inference (VI),
+            Hamiltonian Monte Carlo (HMC), and Langevin Dynamics. Moreover, we will explore
+            the characteristics and visual representation of posterior distributions, providing a better
+            understanding of Bayesian inference.
+          </p>
+          <h3 style="text-align: left">Computationally-efficient BNNs for CV.</h3>
+          <p>
+            Here, we will present recent techniques to improve the computational efficiency of BNNs for computer vision tasks.
+            We will present different forms of obtaining BNNs from a intermediate checkpoints,
+            weight trajectories during a training run, different types of variational subnetworks,
+            etc., along with their main strenghts and limitations.
+          </p>
+          <h3 style="text-align: left">Convert your DNN into a BNN: post-hoc BNN inference.</h3>
+          <p> 
+            This segment focuses on post-hoc inference techniques, with a focus on Laplace approximation. The participants
+            will learn how Laplace approximation serves as a computationally efficient method for
+            approximating the posterior distribution of Bayesian Neural Networks.
+          </p>
+          <h3 style="text-align: left">Quality of estimated uncertainty and practical examples.</h3>
+          <p> 
+            In the final session, participants will learn how to evaluate the quality of UQ in practi-
+            cal settings. We will develop multiple approaches to assess the reliability and calibra-
+            tion of uncertainty estimates, equipping participants with the tools to gauge the robust-
+            ness of their models. Additionally, we will dive into real-world examples and applica-
+            tions, showcasing how UQ can enhance the reliability
+            and performance of computer vision systems in diverse scenarios. Through interactive
+            discussions and case studies, participants will gain practical insights into deploying
+            uncertainty-aware models in real-world applications.
+          </p>
+
+          <h3 style="text-align: left">Uncertainty Quantification Framework.</h3>
+          <p> 
+            This tutorial will also very quickly introduce the <a href="https://github.com/ensta-u2is-ai/torch-uncertainty">TorchUncertainty
+            library</a>, an uncertainty-aware open-source framework for training models in PyTorch.
+          </p>
         </div>
 
         <a href="https://torch-uncertainty.github.io/" target="_blank">
@@ -103,16 +156,15 @@ Foundations to Real-World Applications"}</script>
 
         <div class="containertext" style="max-width:50rem">
           <h2 style="text-align: center">Relation to prior tutorials and short courses</h2>
-          <p> This tutorial is affiliated with the <a href="https://uncv2023.github.io/">UNCV workshop</a>,
-            which had its inaugural edition at ECCV and the subsequent one at ICCV, although our primary
-            emphasis in this tutorial will be on the theoretical facets. </p>
-          <p> Uncertainty Quantification has received some attention
-            in recent times, as evidenced by its inclusion as sections in
+          <p> This tutorial is affiliated with the <a href="https://uncv2023.github.io/">UNCV Workshop</a>,
+            which had its inaugural edition at ECCV 2022, a subsequent one at ICCV, and is back at ECCV this year.
+            In constrast to the workshop, the tutorial puts its primary emphasis on the theoretical facets. </p>
+          <p> UQ has received some attention
+            in recent times, as evidenced by its inclusion in
             the tutorial <a href="https://abursuc.github.io/many-faces-reliability/">'Many Faces of Reliability of Deep
-              Learning for Real-World Deployment'</a>. While this excellent
-            tutorial explored various applications associated with uncertainty, it did not place a specific emphasis on
-            probabilistic
-            models and Bayesian Neural Networks. Our tutorial aims
+              Learning for Real-World Deployment'</a>. While this tutorial explored various applications associated with
+            uncertainty,
+            it did not place a specific emphasis on probabilistic models and Bayesian Neural Networks. Our tutorial aims
             to provide a more in-depth exploration of uncertainty theory, accompanied by the introduction of practical
             applications, including the presentation of the library, <a
               href="https://github.com/ensta-u2is-ai/torch-uncertainty">TorchUncertainty</a>.</p>
